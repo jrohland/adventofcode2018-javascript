@@ -1,16 +1,11 @@
 const path = require('path')
+const utils = require('../../utils')
 
-module.exports = () => {
-  const lineReader = require('readline').createInterface({
-    input: require('fs').createReadStream(path.join(__dirname, 'input'))
-  })
-
+module.exports = async () => {
+  const lines = await utils.loadFile(path.join(__dirname, 'input'), parseInt)
   let curVal = 0
-  lineReader.on('line', line => {
-    if (line) curVal += parseInt(line)
+  lines.forEach(line => {
+    curVal += line
   })
-
-  lineReader.on('close', () => {
-    console.log(`Done: ${curVal}`)
-  })
+  console.log(`Done: ${curVal}`)
 }
