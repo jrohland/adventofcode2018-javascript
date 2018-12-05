@@ -1,9 +1,14 @@
 {
+  "name": "advent-of-code-2018",
+  "license": "MIT",
   "scripts": {
-    "lint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "solution": "node day.js"
   },
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "minimist": "^1.2.0",
+    "require-all": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^5.9.0",
