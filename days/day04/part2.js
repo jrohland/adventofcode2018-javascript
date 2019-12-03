@@ -1,11 +1,10 @@
-const path = require('path')
 const utils = require('../../utils')
 const _ = require('lodash')
 
 module.exports = async () => {
   console.log('Loading input')
-  const lines = _.sortBy(await utils.loadFile(path.join(__dirname, 'input'), line => {
-    const [ date, action ] = line.split('] ')
+  const lines = _.sortBy(await utils.loadFile('04', line => {
+    const [date, action] = line.split('] ')
     return {
       action,
       date: date.substring(1)

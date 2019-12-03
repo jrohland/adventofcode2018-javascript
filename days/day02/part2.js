@@ -1,8 +1,7 @@
-const path = require('path')
 const utils = require('../../utils')
 
 module.exports = async () => {
-  const lines = await utils.loadFile(path.join(__dirname, 'input'), line => {
+  const lines = await utils.loadFile('02', line => {
     return line.split('')
   })
 

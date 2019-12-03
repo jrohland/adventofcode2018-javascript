@@ -1,14 +1,13 @@
-const path = require('path')
 const utils = require('../../utils')
 const _ = require('lodash')
 
 module.exports = async () => {
   console.log('Loading input')
-  const lines = await utils.loadFile(path.join(__dirname, 'input'), line => {
-    const [ id, positionAndSize ] = line.split(' @ ')
-    const [ position, size ] = positionAndSize.split(': ')
-    const [ left, top ] = position.split(',')
-    const [ width, height ] = size.split('x')
+  const lines = await utils.loadFile('03', line => {
+    const [id, positionAndSize] = line.split(' @ ')
+    const [position, size] = positionAndSize.split(': ')
+    const [left, top] = position.split(',')
+    const [width, height] = size.split('x')
 
     return {
       id,

@@ -1,9 +1,8 @@
-const path = require('path')
 const _ = require('lodash')
 const utils = require('../../utils')
 
 module.exports = async () => {
-  const lines = await utils.loadFile(path.join(__dirname, 'input'))
+  const lines = await utils.loadFile('02')
 
   const repetitions = lines.map(line => {
     const letters = {}

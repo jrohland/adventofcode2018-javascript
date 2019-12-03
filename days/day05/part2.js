@@ -1,10 +1,9 @@
-const path = require('path')
 const utils = require('../../utils')
 const _ = require('lodash')
 
 module.exports = async () => {
   console.log('Loading input')
-  const input = (await utils.loadFile(path.join(__dirname, 'input')))[0]
+  const input = (await utils.loadFile('05'))[0]
   const chars = {}
 
   for (let i = 97; i <= 122; i++) {

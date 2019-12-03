@@ -1,10 +1,9 @@
-const path = require('path')
 const utils = require('../../utils')
 const _ = require('lodash')
 
 module.exports = async () => {
   console.log('Loading input')
-  let input = (await utils.loadFile(path.join(__dirname, 'input')))[0]
+  let input = (await utils.loadFile('05'))[0]
   let reactionFound = false
 
   do {
