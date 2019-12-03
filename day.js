@@ -1,3 +1,6 @@
+// Add lodash to globals
+global._ = require('lodash')
+
 const argv = require('minimist')(process.argv.slice(2))
 
 const padDate = (day) => {
