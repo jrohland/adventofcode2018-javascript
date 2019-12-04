@@ -36,11 +36,12 @@ const mutateGrid = (coords) => {
   })
 }
 
-const drawAndMutate = (coords) => {
+const drawAndMutate = (coords, seconds) => {
   const result = drawGrid(coords)
+  if (result) console.log(`seconds: ${seconds}`)
   mutateGrid(coords)
   const time = (result) ? 100 : 0
-  setTimeout(drawAndMutate, time, coords)
+  setTimeout(drawAndMutate, time, coords, seconds + 1)
 }
 
 module.exports = async () => {
@@ -62,5 +63,5 @@ module.exports = async () => {
     }
   })
 
-  drawAndMutate(coords)
+  drawAndMutate(coords, 0)
 }
